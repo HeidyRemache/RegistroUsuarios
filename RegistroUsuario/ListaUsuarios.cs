@@ -19,5 +19,31 @@ namespace RegistroUsuario
         {
             Usuarios.Add(usuario);
         }
+
+        public List<Usuario> BuscarApellido(string apellido)
+        {
+            List<Usuario> aux = new List<Usuario>();
+            foreach (Usuario usuario in Usuarios)
+            {
+                if (usuario.Apellido.Equals(apellido))
+                {
+                    aux.Add(usuario);
+                }
+            }
+            return aux;
+        }
+
+        public List<Usuario> BuscarCedula(string id)
+        {
+            List<Usuario> aux = new List<Usuario>();
+            foreach (Usuario usuario in Usuarios)
+            {
+                if (usuario.Cedula.Equals(id))
+                {
+                    aux.Add(usuario);
+                }
+            }
+            return aux;
+        }
     }
 }
